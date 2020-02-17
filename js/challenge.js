@@ -3,12 +3,12 @@ const counter = document.getElementById('counter')
 
 let num = parseInt(counter.innerText)
 
-let e = setInterval(function(){ 
+let e = setInterval(function(){
    num++
    counter.innerText = num.toString() } , 1000)
 
 
-   document.getElementById('minus').addEventListener('click', function(event){ 
+   document.getElementById('minus').addEventListener('click', function(event){
        counter.innerText--
     })
 
@@ -22,13 +22,12 @@ let e = setInterval(function(){
                 let resume = document.getElementById('pause').innerHTML = 'resume'
                 document.getElementById('pause').id = 'resume'
             })};
-        
-        
+
+
         if (document.getElementById('resume')) {
             document.getElementById('resume').addEventListener('click', function(event){
                 document.getElementById('resume').innerHTML = 'pause'
                 document.getElementById('resume').id = 'pause'
                 setInterval()
-     
- })};
 
+ })};
