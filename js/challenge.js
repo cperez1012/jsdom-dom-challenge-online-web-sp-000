@@ -2,7 +2,7 @@ const counter = document.getElementById('counter')
 
 let num = parseInt(counter.innerText)
 
-let e = setInterval(function(){
+let t = setInterval(function(){
    num++
    counter.innerText = num.toString() } , 1000)
 
@@ -17,7 +17,7 @@ let e = setInterval(function(){
 
         if (document.getElementById('pause')){
             document.getElementById('pause').addEventListener('click', function(event){
-                clearInterval(e)
+                clearInterval(t)
                 let resume = document.getElementById('pause').innerHTML = 'resume'
                 document.getElementById('pause').id = 'resume'
             })};
