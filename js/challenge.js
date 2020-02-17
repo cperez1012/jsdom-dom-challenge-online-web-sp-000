@@ -1,29 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-const createTaskForm = document.getElementById("create-task-form");
-// const deleteTasks = document.getElementById("delete-task-form");
+const counter = document.getElementById('counter')
+//const likes = document.getElementsByClassName('likes')
 
-createTaskForm.addEventListener("submit", createNewTask);
-// deleteTasks.addEventListener("submit", deleteAllTasks);
-});
+let num = parseInt(counter.innerText)
 
-const createNewTask = event => {
-event.preventDefault();
-const newTaskDescription = document.getElementById("new-task-description");
-const newTask = document.createElement("li");
-newTask.innerText = newTaskDescription.value;
-console.log(newTask);
+let e = setInterval(function(){ 
+   num++
+   counter.innerText = num.toString() } , 1000)
 
-appendNewTask(newTask);
-event.target.reset();
-};
 
-const appendNewTask = task => {
-document.getElementById("tasks").appendChild(task);
-};
+   document.getElementById('minus').addEventListener('click', function(event){ 
+       counter.innerText--
+    })
 
-// const deleteAllTasks = event => {
-// event.preventDefault();
-// const findTasks = document.getElementById("tasks");
-// console.log(findTasks);
-// findTasks.innerText = "";
-// };
+   document.getElementById('plus').addEventListener('click', function(event){
+       counter.innerText++
+   })
+
+        if (document.getElementById('pause')){
+            document.getElementById('pause').addEventListener('click', function(event){
+                clearInterval(e)
+                let resume = document.getElementById('pause').innerHTML = 'resume'
+                document.getElementById('pause').id = 'resume'
+            })};
+        
+        
+        if (document.getElementById('resume')) {
+            document.getElementById('resume').addEventListener('click', function(event){
+                document.getElementById('resume').innerHTML = 'pause'
+                document.getElementById('resume').id = 'pause'
+                setInterval()
+     
+ })};
+
