@@ -1,5 +1,4 @@
 const counter = document.getElementById('counter')
-//const likes = document.getElementsByClassName('likes')
 
 let num = parseInt(counter.innerText)
 
